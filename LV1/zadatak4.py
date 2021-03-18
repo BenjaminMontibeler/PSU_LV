@@ -21,7 +21,3 @@ print("Number count: ", count)
 print("Largest number: ", max)
 print("Smallest number: ", min)
 print(sum/count)
-
-
-
-
