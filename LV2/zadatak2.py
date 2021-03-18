@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 x = []
 np.random.seed(56)
 for brojbacanja in range(0, 100):
-    brojbacanja = np.random.randint(low = 1, high = 7)
+    brojbacanja = np.random.randint(low = 1, high = 6)
     x.append(brojbacanja)
 
 b = np.array(x)
@@ -11,7 +11,7 @@ print(x)
 
 his = np.histogram(b, bins=range(5))
 fig, ax = plt.subplots()
-offset = .6
+offset = 6
 plt.bar(his[1][1:],his[0])
 ax.set_xticks(his[1][1:] + offset)
 ax.set_xticklabels( ('1', '2', '3', '4', '5', '6') )
