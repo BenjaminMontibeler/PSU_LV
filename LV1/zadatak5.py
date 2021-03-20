@@ -1,4 +1,4 @@
-msum = 0.0
+sum = 0.0
 count = 0
 
 fname = input("Enter file name: ")
@@ -6,7 +6,7 @@ fname = input("Enter file name: ")
 try:
     fhand = open(fname)
 except:
-    print("File cannot be opened.", fname)
+    print("File", fname, "cannot be opened.")
     exit()
 
 for line in fhand:
