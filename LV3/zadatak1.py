@@ -24,4 +24,6 @@ print("\nbroj autommobila s automatskimm mjenjacem i snagom preko 100 konjskih s
 print(len(mtcars[(mtcars.am == 0) & (mtcars.hp > 100)]))
 #7
 print("\nMasa svakog automobila u kg\n")
-print(mtcars['wt']*1000*0.45359237)
+new_wt = mtcars.wt*1000*0.45359237
+mtcars.wt = new_wt
+print(mtcars)
