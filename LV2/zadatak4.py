@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
 import skimage.io
-from skimage.transform import rescale, resize
+from skimage.transform import resize
 
  
 img = skimage.io.imread('tiger.png', as_gray=True)
