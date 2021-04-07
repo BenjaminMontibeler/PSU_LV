@@ -15,7 +15,7 @@ print(mtcars[mtcars.cyl == 6].mpg.mean())
 print("\nsrednja potrošnja automobila s 4 cilindra mase između 2000 i 2200 lbs: \n")
 print(mtcars[(mtcars.cyl == 4) & (mtcars.wt <= 2.2) & (mtcars.wt >= 2)].mpg.mean())
 #5
-print("\nRucni mjenjac: ")
+print("\nRucni mjenjac: \n")
 print(len(mtcars[mtcars.am == 1]))
 print("\nAutomatski mjenjac: \n")
 print(len(mtcars[mtcars.am == 0]))
