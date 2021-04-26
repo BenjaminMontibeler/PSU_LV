@@ -19,7 +19,7 @@ boston['MEDV'] = boston_dataset.target
 # data preprocessing
 boston.isnull().sum()
 
-#e xploratory data analysis
+# exploratory data analysis
 
 sns.set(rc={'figure.figsize':(11.7,8.27)})
 sns.displot(boston['MEDV'], bins=30)
