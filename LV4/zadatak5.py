@@ -22,7 +22,7 @@ boston.isnull().sum()
 # exploratory data analysis
 
 sns.set(rc={'figure.figsize':(11.7,8.27)})
-sns.displot(boston['MEDV'], bins=30)
+sns.distplot(boston['MEDV'], bins=30)
 plt.show()
 
 correlation_matrix = boston.corr().round(2)
@@ -80,3 +80,6 @@ print("The model performance for testing set")
 print("--------------------------------------")
 print('RMSE is {}'.format(rmse))
 print('R2 score is {}'.format(r2))
+
+plt.scatter(Y_test, y_test_predict)
+plt.show()
