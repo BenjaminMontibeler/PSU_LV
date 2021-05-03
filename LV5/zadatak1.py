@@ -35,5 +35,5 @@ def generate_data(n_samples, flagc):
     return X
 
 df = pd.DataFrame(generate_data(500, 1))
-plt.scatter(df[0],df[1],color= 'green')
+plt.scatter(df[0],df[1],color= 'hotpink')
 plt.show()
