@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn import datasets
 import pandas as pd
 import seaborn as sns
+from sklearn.cluster import KMeans
 
 def generate_data(n_samples, flagc):
     
@@ -34,6 +35,15 @@ def generate_data(n_samples, flagc):
         
     return X
 
-df = pd.DataFrame(generate_data(500, 1))
-plt.scatter(df[0],df[1],color= 'hotpink')
+X = generate_data(500, 1)
+
+kmeans = KMeans(n_clusters=3)
+kmeans.fit(X)
+y_kmeans = kmeans.predict(X)
+
+plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=50, cmap='viridis')
+
+centers = kmeans.cluster_centers_
+plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5)
+
 plt.show()
