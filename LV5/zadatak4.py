@@ -7,7 +7,7 @@ import matplotlib.image as mpimg
 imageNew = mpimg.imread('example_grayscale.png')
 
 X = imageNew.reshape((-1, 1)) # We need an (n_sample, n_feature) array
-k_means = cluster.KMeans(n_clusters=5,n_init=1)
+k_means = cluster.KMeans(n_clusters=10,n_init=1)
 k_means.fit(X)
 values = k_means.cluster_centers_.squeeze()
 labels = k_means.labels_
