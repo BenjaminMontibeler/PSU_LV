@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.neural_network import MLPClassifier
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import plot_confusion_matrix
 
 X, y = fetch_openml('mnist_784', version=1, return_X_y=True, as_frame=False)
 
@@ -33,3 +34,6 @@ print('Test score: ', mlp_mnist.score(X_test, y_test))
 # spremi mrezu na disk
 filename = "NN_model.sav"
 joblib.dump(mlp_mnist, filename)
+
+plot_confusion_matrix(mlp_mnist, X_test, y_test)
+plt.show()
