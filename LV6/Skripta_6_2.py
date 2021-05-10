@@ -18,7 +18,7 @@ plt.show()
 
 
 # TODO: prebacite sliku u vektor odgovarajuce velicine
-
+img = img.reshape(1,28*28)
 
 # vrijednosti piksela kao float32
 img = img.astype('float32')
@@ -28,7 +28,7 @@ filename = "NN_model.sav"
 mlp_mnist = joblib.load(filename)
 
 # TODO: napravi predikciju i spremi u varijablu digit kao string
-
+label = mlp_mnist.predict(img)
 
 print("------------------------")
 print("Slika sadrzi znamenku: ", label)
