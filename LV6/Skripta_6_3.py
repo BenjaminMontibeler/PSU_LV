@@ -66,6 +66,8 @@ while True:
         
         # start TODO: klasificiraj sliku (ulazni vektor) pomocu trenirane neuronske mreze i postavi tocnu klasu u varijablu label (kao string)
 
+        print("Na slici je prikazan broj: ", mlp_mnist.predict(img_vector))
+
         # end of TODO
 
         # show rectangle and label on frame
