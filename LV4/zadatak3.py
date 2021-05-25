@@ -102,3 +102,12 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.legend(loc = 4)
 plt.show()
+
+plt.plot(x, linearModelmed.predict(xmed),'g:',label='model_med')
+
+plt.plot(x, linearModellow.predict(xlow),'b-.',label='model_low')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend(loc = 4)
+plt.show()
